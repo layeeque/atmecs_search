@@ -1,3 +1,5 @@
+
+
 const express = require('express');
 const bodyParser = require('body-parser');
 var https = require('https');
@@ -36,12 +38,12 @@ restService.post('/echo', function(req, res) {
 //.displayText.items[0].snipppet
 //)
                 // console.log("obj1 : "+obj1)
-    //               return res.json({
-    //          speech: obj,
-    //          displayText: obj,
-    //          source: 'webhook-echo-sample'
-    //  });
-    return res.json(obj.items[0].snippet);
+                return res.json({
+         speech: obj.items[0].snippet,
+             displayText: obj,
+            source: 'webhook-echo-sample'
+      });
+    //return res.json(obj);
       //return res.json(obj);
               })
             })
