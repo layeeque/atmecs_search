@@ -37,7 +37,7 @@ restService.post('/echo', function(req, res) {
 //)
                 // console.log("obj1 : "+obj1)
                 return res.json({
-         speech: "parbhani".concat(obj.items[0].snippet),
+         speech: "parbhani ".concat(c),
              displayText: obj,
             source: 'webhook-echo-sample'
       });
