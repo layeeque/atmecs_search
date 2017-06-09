@@ -1,5 +1,3 @@
-
-
 const express = require('express');
 const bodyParser = require('body-parser');
 var https = require('https');
@@ -15,7 +13,7 @@ restService.use(bodyParser.json());
 restService.post('/echo', function(req, res) {
 
      var c = req.body.result && req.body.result.parameters && req.body.result.parameters.echoText ? req.body.result.parameters.echoText : "Seems like some problem. Speak again";
-
+//var c="hyderabad";
      var obj="";
     //var api = "https://www.googleapis.com/customsearch/v1?key=AIzaSyAbMVp_Kmi6Ixrh6RfVLAbW_mMAY0O7itQ&cx=013351406654656600973:5gj2eij-z1i&q=encodeURIComponent("+c+")";
     var api = "https://www.googleapis.com/customsearch/v1?key=AIzaSyBW9EOxBT5qOjpvP7c4Lz9dq_zN67zvocA&cx=008329582271722688199:qezsuxo7m00&q="+c;
@@ -165,3 +163,5 @@ restService.post('/slack-test', function(req, res) {
 restService.listen((process.env.PORT || 8000), function() {
     console.log("Server up and listening");
 });
+
+
